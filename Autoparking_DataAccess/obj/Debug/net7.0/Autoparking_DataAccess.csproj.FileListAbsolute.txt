@@ -1,0 +1,17 @@
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_DataAccess.deps.json
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_DataAccess.dll
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_DataAccess.pdb
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.csproj.AssemblyReference.cache
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.AssemblyInfoInputs.cache
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.AssemblyInfo.cs
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.dll
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\refint\Autoparking_DataAccess.dll
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.pdb
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\ref\Autoparking_DataAccess.dll
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_DataAccess.runtimeconfig.json
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_Models.dll
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\bin\Debug\net7.0\Autoparking_Models.pdb
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.csproj.CopyComplete
+C:\Users\flybe\source\repos\Autoparking\Autoparking_DataAccess\obj\Debug\net7.0\Autoparking_DataAccess.genruntimeconfig.cache

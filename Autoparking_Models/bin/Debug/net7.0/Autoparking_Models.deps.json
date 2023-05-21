@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Autoparking_Models/1.0.0": {
+        "runtime": {
+          "Autoparking_Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Autoparking_Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

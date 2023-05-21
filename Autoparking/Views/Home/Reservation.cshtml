@@ -1,0 +1,95 @@
+﻿@model Car
+@using static Autoparking_Models.ReservationDetails;
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-primary">Reservation for @Model.Name</h1>
+        <div class="border p-3">
+            <form id="reservationForm" action="@Url.Action("Reservation", "Home")" method="post">
+                <input value="@Model.id" name="CarId" hidden />
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-3">
+                            <label class="text-black">Reservation starts:</label>
+                            <input type="hidden" id="startDate" name="startDate" value="">
+                            <input class="form-control col-3" type="text" id="startDatepicker" name="startDatePicker" value="" autocomplete="off" required>
+                        </div> 
+                        <div class="col-3 mb-2">
+                            <label class="text-black">Reservation ends:</label>
+                            <input type="hidden" id="endDate" name="endDate" value="">
+                            <input class="form-control col-3" type="text" id="endDatepicker" name="endDatePicker" value="" autocomplete="off" required>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <label class="text-black">Your email adress:</label>
+                            <input type="email" class="form-control col-3" name="recipient" required>
+                        </div>
+                        <button type="submit" id="reservationForm" class="btn btn-primary mb-2">Reserve</button>
+                    </div>
+                    <div class="col-3">
+                        <input type="hidden" id="totalPrice" name="totalPrice" value="">
+                        <h4 class="text-black float-start">Final price: <span id="Price">0</span> Kč</h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var today = new Date();
+            $('#startDatepicker').datepicker({
+                minDate: today,
+                onSelect: function (selectedDate) {
+                    var minEndDate = new Date(selectedDate);
+                    minEndDate.setDate(minEndDate.getDate() + 1);
+                    $('#endDatepicker').datepicker('option', 'minDate', minEndDate);
+                }
+            });
+
+            $('#endDatepicker').datepicker({
+                minDate: today
+            });
+
+            $("#reservationForm").submit(function () {
+                var startDate = $("#startDatepicker").datepicker("getDate");
+                var endDate = $("#endDatepicker").datepicker("getDate");
+
+                $("#startDate").val(formatDate(startDate));
+                $("#endDate").val(formatDate(endDate));
+            });
+
+            $("#startDatepicker, #endDatepicker").change(function () {
+                var startDate = $("#startDatepicker").datepicker("getDate");
+                var endDate = $("#endDatepicker").datepicker("getDate");
+                var differenceInDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+
+                var pricePerDay = getPriceForDate(startDate);
+
+                var totalPrice = pricePerDay * differenceInDays;
+
+                $("#totalPrice").val(totalPrice);
+                $("#Price").text(totalPrice);
+
+
+
+            });
+
+            function formatDate(date) {
+                var year = date.getFullYear();
+                var month = ("0" + (date.getMonth() + 1)).slice(-2);
+                var day = ("0" + date.getDate()).slice(-2);
+                return year + "-" + month + "-" + day;
+            }
+
+            function getPriceForDate(date) {
+                return @Model.Price;
+            }
+        });
+    </script>
+}
